@@ -1,5 +1,5 @@
 " Luke's Dope Vimrc file 
-" Optimized for vim 8.0
+" Optimized for vim 7.3
 
 " Plugin Stuff:
     set nocompatible
@@ -17,10 +17,8 @@
     Plugin 'altercation/vim-colors-solarized'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'jiangmiao/auto-pairs'
-    Plugin 'Valloric/YouCompleteMe' " Only works in newer versions of vim
-    "Plugin 'autocompletePop?'
-    Plugin 'w0rp/ale' " Only works in newer versions of vim, must install linters
-    "Plugin 'vim-syntastic/syntastic'
+    Plugin 'vim-syntastic/syntastic'
+    Plugin 'vim-scripts/AutoComplPop'
 
     " All of your Plugins must be added before the following line
     call vundle#end()            " required
@@ -91,11 +89,11 @@ autocmd BufWinEnter * NERDTreeMirror
 autocmd VimEnter * wincmd p
 
 " Syntastic Options:
-" let g:syntastic_python_checkers = ['pyflakes', 'python', 'pylint']
-" let g:syntastic_quiet_messages = { "!level":  "errors" } "Ignore all messages besides errors
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_auto_loc_list = 1
+let g:syntastic_python_checkers = ['pyflakes', 'python', 'pylint']
+let g:syntastic_quiet_messages = { "!level":  "errors" } "Ignore all messages besides errors
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_auto_loc_list = 1
 
 " Change Backup Location:
 set backup " keep a backup file (restore to previous version)
@@ -125,3 +123,4 @@ set t_Co=256
 set background=dark
 let g:solarized_termcolors=256
 colorscheme solarized
+
