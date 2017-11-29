@@ -1,6 +1,10 @@
 " Luke's Dope Vimrc file 
 " Optimized for vim 8.0
 
+" Vim installed from source using guide from:
+" github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source 
+" Vim 8.0 can be uninstalled using dpkg -r vim
+
 " Plugin Stuff:
     set nocompatible
     filetype off
